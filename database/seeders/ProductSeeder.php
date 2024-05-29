@@ -47,6 +47,22 @@ class ProductSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'NIKE',
+                'brand' => 'New ',
+                'category' => 'Woman',
+                'color' => 'Pink',
+                'slug' => Str::slug('NEW BALANCE'),
+                'price' => 259900,
+                'description' => 'Comfortable running shoes from Nike.',
+                'url' => 'https://www.footlocker.id/media/catalog/product/cache/90a31bdacdbcafcbfc210df8b20fe81f/0/1/01-NEW-BALANCE-FFSSBNEWA-NEWU9060FRL-Pink.jpg',
+                'url_1' => 'https://www.footlocker.id/media/catalog/product/cache/1384ea813c36abc3a773dd6494b9b881/0/2/02-NEW-BALANCE-FFSSBNEWA-NEWU9060FRL-Pink.jpg',
+                'url_2' => 'https://www.footlocker.id/media/catalog/product/cache/90a31bdacdbcafcbfc210df8b20fe81f/0/3/03-NEW-BALANCE-FFSSBNEWA-NEWU9060FRL-Pink.jpg',
+                'url_3' => 'https://www.footlocker.id/media/catalog/product/cache/1384ea813c36abc3a773dd6494b9b881/0/4/04-NEW-BALANCE-FFSSBNEWA-NEWU9060FRL-Pink.jpg',
+                'url_4' => 'https://www.footlocker.id/media/catalog/product/cache/90a31bdacdbcafcbfc210df8b20fe81f/0/5/05-NEW-BALANCE-FFSSBNEWA-NEWU9060FRL-Pink.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
             // Tambahkan data produk lainnya di sini
         ]);
     }
