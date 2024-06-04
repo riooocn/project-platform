@@ -1,26 +1,5 @@
 <x-layout :user="$user">
   <x-slot:title>{{ $title }}</x-slot:title>
-  <!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        gridTemplateRows: {
-          '[auto,auto,1fr]': 'auto auto 1fr',
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
 
 <div class="bg-white">
   <div class="pt-6">
