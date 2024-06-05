@@ -262,7 +262,7 @@ class ProductSeeder extends Seeder
                 'color' => 'Ivory',
                 'slug' => Str::slug('DUNK LOW SE BASKETBALL'),
                 'price' =>1383200,
-                'description' => 'Diciptakan untuk lapangan bertekstur keras dan dibawa ke jalanan, bola basket klasik tahun 80-an ini kembali segar di atas es dengan sudut pandang baru.... Nike Hatchery dengan bangga merilis Dunk beraksen pola ikan trout, sisik ikan yang berkilau, plus kail ikan Nike Swoosh. Jika Anda memancing cukup lama, Anda akan menemukan beberapa ikan Nike yang langka di lidah dan kaus kaki..',
+                'description' => 'Diciptakan untuk lapangan yang bertekstur keras dan dibawa ke jalanan, bola basket klasik tahun 80-an ini kembali segar di atas es dengan sudut pandang baru.... Nike Hatchery dengan bangga merilis Dunk beraksen pola ikan trout, sisik ikan yang berkilau, plus kail ikan Nike Swoosh. Jika Anda memancing cukup lama, Anda akan menemukan beberapa ikan Nike yang langka di lidah dan kaus kaki..',
                 'url' => 'https://www.footlocker.id/media/catalog/product/cache/90a31bdacdbcafcbfc210df8b20fe81f/0/1/01-NIKE-F34KBNIK5-NIKFQ8147104-Ivory.jpg',
                 'url_1' => 'https://www.footlocker.id/media/catalog/product/cache/1384ea813c36abc3a773dd6494b9b881/0/2/02-NIKE-F34KBNIK5-NIKFQ8147104-Ivory.jpg',
                 'url_2' => 'https://www.footlocker.id/media/catalog/product/cache/1384ea813c36abc3a773dd6494b9b881/0/3/03-NIKE-F34KBNIK5-NIKFQ8147104-Ivory.jpg',
