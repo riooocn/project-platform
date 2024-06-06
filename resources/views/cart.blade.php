@@ -95,20 +95,20 @@
             <h3 class="text-2xl font-semibold text-gray-900">People also bought</h3>
             <div class="mt-6 grid grid-cols-3 gap-4 sm:mt-8">
         
-                @foreach ($products as $product)
+                @foreach ($products->take(3) as $product)
                 <div class="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                     <a href="/products/{{ $product['slug'] }}" class="overflow-hidden rounded">
                       <img class="mx-auto h-44 w-44" src="{{ $product['url'] }}" alt="imac image" />
                     </a>
                     <div>
-                      <a href="#" class="text-lg font-semibold leading-tight text-gray-900 hover:underline">{{ $product['name'] }}</a>
-                      <p class="mt-2 text-base font-normal text-gray-500">{{ $product['description'] }}</p>
+                      <a href="/products/{{ $product['slug'] }}" class="text-lg font-semibold leading-tight text-gray-900 hover:underline">{{ $product['name'] }}</a>
+                      <p class="mt-2 text-base font-normal text-gray-500">{{  Str::limit($product['description'], 100) }}</p>
                     </div>
                     <div>
                       <p class="text-lg font-bold text-gray-900">
-                        <span class="line-through"> $399,99 </span>
+                        <span class="line-through"> Rp.3.000.000,00</span>
                       </p>
-                      <p class="text-lg font-bold leading-tight text-red-600">{{ $product['price'] }}</p>
+                      <p class="text-lg font-bold leading-tight text-red-600">Rp.{{ number_format($product->price, 2, ',', '.') }}</p>
                     </div>
                     <div class="mt-6 flex items-center gap-2.5">
                       <button type="button" class="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
