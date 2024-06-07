@@ -35,6 +35,13 @@ class ProductVariantSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'shoe_id' => 2, // Pastikan shoe_id ini sudah ada di tabel 'products'
+                'size' => '43',
+                'stock' => 17,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
             // Tambahkan data varian produk lainnya di sini
         ]);
     }
