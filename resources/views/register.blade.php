@@ -12,6 +12,10 @@
         .container {
             max-width: 400px;
         }
+        /* Add padding to the input fields */
+        input[type="text"], input[type="password"] {
+            padding-left: 10px; /* Adjust the value as needed */
+        }
     </style>
 </head>
 <body>
