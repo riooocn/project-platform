@@ -118,6 +118,14 @@ class CartController extends Controller
 
         $cartId = $request->input('cart_id');
 
+        // Cek apakah keranjang memiliki item
+        $cartItemsCount = CartItem::where('cart_id', $cartId)->count();
+
+        if ($cartItemsCount == 0) {
+            // Jika keranjang kosong, kembalikan pesan kesalahan
+            return redirect()->back()->with('error', 'Keranjang belanja Anda kosong.');
+        }
+
         // Hapus semua item di tabel cart_items yang sesuai dengan cart_id
         CartItem::where('cart_id', $cartId)->delete();
 
@@ -125,7 +133,6 @@ class CartController extends Controller
 
         return redirect()->back()->with('success', 'Checkout berhasil. Keranjang belanja Anda sudah kosong.');
     }
-    
 }
 
 
