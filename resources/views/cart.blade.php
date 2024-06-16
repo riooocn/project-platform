@@ -22,6 +22,12 @@
             </div>
             @endif
             
+            @if($cartItems->isEmpty())
+                <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm md:p-6">
+                    <p class="text-center text-gray-900 font-medium">Keranjang belanja Anda kosong.</p>
+                </div>
+            @else
+
             {{-- shopping cart --}}
             @foreach($cartItems as $item)
             <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm md:p-6">
@@ -75,7 +81,8 @@
                 </div>
             </div>
             @endforeach
-                    
+            @endif
+            
           </div>
           
 
