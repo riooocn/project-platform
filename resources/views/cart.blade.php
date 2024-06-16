@@ -14,23 +14,13 @@
                 <span class="block sm:inline">{{ session('success') }}</span>
             </div>
             @endif
-            
-            @if ($errors->any())
-                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-                    <strong class="font-bold">Error!</strong>
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
 
-            @if($cartItems->isEmpty())
-                <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm md:p-6">
-                    <p class="text-center text-gray-900 font-medium">Keranjang belanja Anda kosong.</p>
-                </div>
-            @else
+            @if (session('error'))
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <strong class="font-bold">Failed</strong>
+                <span class="block sm:inline">{{ session('error') }}</span>
+            </div>
+            @endif
             
             {{-- shopping cart --}}
             @foreach($cartItems as $item)
@@ -51,7 +41,7 @@
                     </div>                                        
         
                     <div class="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                        <a href="#" class="text-base font-medium text-gray-900 hover:underline">{{ $item->product->name }}</a>
+                        <a href="/products/{{ $item->product->slug }}" class="text-base font-medium text-gray-900 hover:underline">{{ $item->product->name }}</a>
         
                         <!-- Menampilkan ukuran sepatu -->
                         <div class="flex items-center gap-4">
@@ -85,7 +75,6 @@
                 </div>
             </div>
             @endforeach
-            @endif
                     
           </div>
           
