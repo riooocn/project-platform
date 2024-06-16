@@ -246,7 +246,7 @@ class ProductSeeder extends Seeder
                 'color' => 'Yellow',
                 'slug' => Str::slug('TRANSPORT RUNNING'),
                 'price' =>2799000,
-                'description' => 'Transport Modern Better adalah sepatu yang mudah dikenakan untuk sehari-hari. Bagian atasnya memiliki konstruksi lidah dengan merek Formstrip dan dengan sentuhan akhir garis bordir. Detail tambahan seperti eyestay cetakan, sol luar karet di sepanjang sepatu dengan traksi yang disempurnakan, dan penutup tumit yang memastikan sepatu Transport menyeimbangkan style dan bahan pembuatnya.',
+                'description' => 'Transport Modern Better merupakan sepatu yang mudah dikenakan untuk sehari-hari. Bagian atasnya memiliki konstruksi lidah dengan merek Formstrip dan dengan sentuhan akhir garis bordir. Detail tambahan seperti eyestay cetakan, sol luar karet di sepanjang sepatu dengan traksi yang disempurnakan, dan penutup tumit yang memastikan sepatu Transport menyeimbangkan style dan bahan pembuatnya.',
                 'url' => 'https://www.footlocker.id/media/catalog/product/cache/90a31bdacdbcafcbfc210df8b20fe81f/0/1/01-HOKA-F34RUHKEA-HKE1123154EE-Cream.jpg',
                 'url_1' => 'https://www.footlocker.id/media/catalog/product/cache/1384ea813c36abc3a773dd6494b9b881/0/2/02-HOKA-F34RUHKEA-HKE1123154EE-Cream.jpg',
                 'url_2' => 'https://www.footlocker.id/media/catalog/product/cache/1384ea813c36abc3a773dd6494b9b881/0/3/03-HOKA-F34RUHKEA-HKE1123154EE-Cream.jpg',

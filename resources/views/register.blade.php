@@ -14,34 +14,7 @@
         .container {
             max-width: 400px;
         }
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        input[type="text"], input[type="password"] {
-            padding-left: 10px;
-        }
-        .logo-text {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #151162;
-            text-align: center;
-            letter-spacing: 0.1rem;
-            margin-bottom: 0.2rem;
-            font-style: italic;
-        }
-        .subtitle-text {
-            font-size: small;
-            text-align: center;
-            color: #6c757d;
-            margin-top: -1rem;
-        }
-        .sign-in-text, .sign-up-text {
-            font-size: 1.5rem;
-            letter-spacing: 0.05rem;
-            text-align: center;
-        }
-        .submit-btn {
-            letter-spacing: 0.1rem;
+
         }
     </style>
 </head>
