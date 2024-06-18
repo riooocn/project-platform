@@ -48,11 +48,11 @@ class ProductSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'name' => 'SAMBAE SNEAKERS',
+                'name' => 'SAMBA SNEAKERS',
                 'brand' => 'ADIDAS',
                 'category' => 'Woman',
                 'color' => 'White',
-                'slug' => Str::slug('SAMBAE SNEAKERS'),
+                'slug' => Str::slug('SAMBA SNEAKERS'),
                 'price' => 2200000,
                 'description' => 'Tetap meninggalkan kesan. Setalah sepatu adidas Samba menjadi favorit dalam olahraga, mereka lalu menemukan tempat di antara tren fashion visioner dalam banyak subkultur. Sepatu yang diperbarui ini mengambil inspirasi desain minimalis dari siluet klasik dan memacu lebih jauh lagi dengan aksen samar dan 3-Stripes yang nyaris tidak terlihat. Pakai sepatu ini dan biarkan sejarah terulang kembali, terlihat fresh selalu.',
                 'url' => 'https://www.footlocker.id/media/catalog/product/cache/90a31bdacdbcafcbfc210df8b20fe81f/0/1/01-ADIDAS-FFSSBADI5-ADIID0438-White.jpg',

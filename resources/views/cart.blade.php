@@ -87,6 +87,7 @@
           
 
           {{-- product lain --}}
+        
           <div class="hidden xl:mt-8 xl:block">
             <h3 class="text-2xl font-semibold text-gray-900">People also bought</h3>
             <div class="mt-6 grid grid-cols-3 gap-4 sm:mt-8">
@@ -105,14 +106,6 @@
                         <span class="line-through"> Rp.3.000.000,00</span>
                       </p>
                       <p class="text-lg font-bold leading-tight text-red-600">Rp.{{ number_format($product->price, 2, ',', '.') }}</p>
-                    </div>
-                    <div class="mt-6 flex items-center gap-2.5">
-                      <button type="button" class="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
-                        <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4" />
-                        </svg>
-                          Add to cart
-                      </button>
                     </div>
                 </div>
                 @endforeach
