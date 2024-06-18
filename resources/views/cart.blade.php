@@ -127,40 +127,48 @@
                 <div class="space-y-4">
                     @php
                     $subtotal = 0;
+                    $storePickupFee = 0; // Default store pickup fee is 0
+                
                     foreach($cartItems as $item) {
                         $subtotal += $item->product->price * $item->quantity;
                     }
+                
+                    if ($subtotal > 0) {
+                        $storePickupFee = 99; // Set the store pickup fee if there are items in the cart
+                    }
+                
                     $discountRate = 0.20; // 20% discount rate
                     $discount = $subtotal * $discountRate;
                     $subtotalAfterDiscount = $subtotal - $discount;
                     $taxRate = 0.11; // 11% tax rate
                     $tax = $subtotalAfterDiscount * $taxRate;
-                    $storePickupFee = 99; // Assuming a fixed store pickup fee
                     $total = $subtotalAfterDiscount + $storePickupFee + $tax;
                     @endphp
-        
+                
                     <div class="space-y-2">
                         <dl class="flex items-center justify-between gap-4">
                             <dt class="text-base font-normal text-gray-500">Original Price</dt>
                             <dd class="text-base font-medium text-gray-900">{{ '$'.number_format($subtotal, 2) }}</dd>
                         </dl>
-        
+                
                         <dl class="flex items-center justify-between gap-4">
                             <dt class="text-base font-normal text-gray-500">Discount</dt>
                             <dd class="text-base font-medium text-red-600">{{ '-$'.number_format($discount, 2) }}</dd>
                         </dl>
-        
+                
+                        @if ($storePickupFee > 0)
                         <dl class="flex items-center justify-between gap-4">
                             <dt class="text-base font-normal text-gray-500">Store Pickup</dt>
                             <dd class="text-base font-medium text-gray-900">{{ '$'.$storePickupFee }}</dd>
                         </dl>
-        
+                        @endif
+                
                         <dl class="flex items-center justify-between gap-4">
                             <dt class="text-base font-normal text-gray-500">Tax (11%)</dt>
                             <dd class="text-base font-medium text-gray-900">{{ '$'.number_format($tax, 2) }}</dd>
                         </dl>
                     </div>
-        
+                
                     <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2">
                         <dt class="text-base font-bold text-gray-900">Total</dt>
                         <dd class="text-base font-bold text-gray-900">{{ '$'.number_format($total, 2) }}</dd>
@@ -172,8 +180,6 @@
                     <input type="hidden" name="cart_id" value="{{ $cart->id }}" />
                     <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Checkout</button>
                 </form>
-
-                {{-- <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Checkout</button> --}}
         
                 <div class="flex items-center justify-center gap-2">
                     <span class="text-sm font-normal text-gray-500"> or </span>

@@ -11,7 +11,7 @@
 
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
     
-    <title></title>
+    <title>{{ $title }}</title>
 </head>
 <body class="h-full">
     <div class="min-h-full">
