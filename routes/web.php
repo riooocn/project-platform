@@ -8,15 +8,15 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 
-Route::get('/login', [UserController::class , 'login'])->name('login');
+Route::get('/login', [UserController::class , 'login'])->name('login')->middleware('guest');
 
-Route::get('/register', [UserController::class , 'registerForm']);
+Route::get('/register', [UserController::class , 'registerForm'])->middleware('guest');
 
 Route::post('/create', [UserController::class , 'register'])->name('register');
 
 Route::post('/authenticate' , [UserController::class , 'authenticate']);
 
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 Route::get('/', [ HomeController::class , 'showHome'])->middleware('auth');
 
