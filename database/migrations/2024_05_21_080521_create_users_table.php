@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('password');
-            $table->rememberToken(); // Add remember_token column
             $table->timestamps(); // Add timestamps for created_at and updated_at
         });
 
