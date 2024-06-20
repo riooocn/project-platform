@@ -10,7 +10,7 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/login', [UserController::class , 'login'])->name('login')->middleware('guest');
 
-Route::get('/register', [UserController::class , 'registerForm'])->middleware('guest');
+Route::get('/register', [UserController::class , 'registerForm']);
 
 Route::post('/create', [UserController::class , 'register'])->name('register');
 

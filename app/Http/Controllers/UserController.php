@@ -48,7 +48,6 @@ class UserController extends Controller
         $cart->save();
     
         // Login pengguna
-        auth()->login($user);
     
         return redirect('/login')->with('message', 'Pengguna berhasil dibuat, keranjang berhasil dibuat, dan pengguna berhasil login.');
     }
