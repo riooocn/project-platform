@@ -5,7 +5,7 @@
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
         <div class="flex-shrink-0 ml-2">
-            <span class="text-xl font-bold text-white italic">FORIFEL</span>
+            <span class="text-xl font-bold text-white italic">VOGENCY</span>
           </div>
 
           <div class="hidden md:block">
